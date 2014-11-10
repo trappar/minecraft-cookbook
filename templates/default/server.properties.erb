@@ -1,38 +1,5 @@
-<%- property = node['minecraft']['server_properties'] %>
-#Minecraft server properties
-spawn-protection=<%= property['spawn-protection'] %>
-max-tick-time=<%= property['max-tick-time'] %>
-generator-settings=<%= property['generator-settings'] %>
-force-gamemode=<%= property['force-gamemode'] %>
-allow-nether=<%= property['allow-nether'] %>
-gamemode=<%= property['gamemode'] %>
-enable-query=<%= property['enable-query'] %>
-player-idle-timeout=<%= property['player-idle-timeout'] %>
-difficulty=<%= property['difficulty'] %>
-spawn-monsters=<%= property['spawn-monsters'] %>
-op-permission-level=<%= property['op-permission-level'] %>
-resource-pack-hash=<%= property['resource-pack-hash'] %>
-announce-player-achievements=<%= property['announce-player-achievements'] %>
-pvp=<%= property['pvp'] %>
-snooper-enabled=<%= property['snooper-enabled'] %>
-level-type=<%= property['level-type'] %>
-hardcore=<%= property['hardcore'] %>
-enable-command-block=<%= property['enable-command-block'] %>
-max-players=<%= property['max-players'] %>
-network-compression-threshold=<%= property['network-compression-threshold'] %>
-max-world-size=<%= property['max-world-size'] %>
-server-port=<%= property['server-port'] %>
-server-ip=<%= property['server-ip'] %>
-spawn-npcs=<%= property['spawn-npcs'] %>
-allow-flight=<%= property['allow-flight'] %>
-level-name=<%= property['level-name'] %>
-view-distance=<%= property['view-distance'] %>
-resource-pack=<%= property['resource-pack'] %>
-spawn-animals=<%= property['spawn-animals'] %>
-white-list=<%= property['white-list'] %>
-generate-structures=<%= property['generate-structures'] %>
-online-mode=<%= property['online-mode'] %>
-max-build-height=<%= property['max-build-height'] %>
-level-seed=<%= property['level-seed'] %>
-enable-rcon=<%= property['enable-rcon'] %>
-motd=<%= property['motd'] %>
+# Minecraft server properties
+# This file is managed by Chef, do not edit!
+<% node['minecraft']['server_properties'].each do |name, value| %>
+    <%= name %>=<%= value %>
+<% end %>
